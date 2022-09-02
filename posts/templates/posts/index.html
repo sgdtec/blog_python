@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load humanize%}
+{% load __filters %}
 
 {% block title %} Página Inicial {% endblock %}
 
@@ -34,7 +35,7 @@
                         |
                         {{ post.categoria_post }}
                         |
-                        {{ post.numero_comentarios}} comentário(s)                             
+                        {{ post.numero_comentarios|plural_comentarios}}                             
                     </small>
                 </p>
 
