@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>{% block title%}{% endblock %}Blingo</title>
+    {% include 'partial/_head.html' %}
+</head>
+
+<body>
+
+{% include 'partial/_nav.html' %}
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            {% block content %} {% endblock %}            
+        </div>
+    </div>
+</div>
+<!--_footer.html-->
+{% include 'partial/_footer.html' %}
+<!--/_footer.html-->
+
+<!--_scripts.htm -->
+{% include 'partial/_scripts.html' %}
+<!--/_scripts.html-->
+</body>
+
+</html>
